@@ -45,7 +45,7 @@ app.post('/api/shorturl', (req, res) => {
 
   // Check if URL already exists in the database
   for (let key in urlDatabase) {
-    if (urlDatabasep[key].original_url === originalUrl) {
+    if (urlDatabase[key].original_url === originalUrl) {
       return res.json({
         original_url: originalUrl,
         short_url: key,
